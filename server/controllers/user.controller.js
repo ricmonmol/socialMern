@@ -27,7 +27,7 @@ const list = async (req, res) => {
   }
 };
 
-const userByID = async (req, res, next, id) => {
+const userById = async (req, res, next, id) => {
   try {
     let user = await User.findById(id);
     if (!user)
@@ -78,4 +78,4 @@ const remove = async (req, res) => {
   }
 };
 
-export default { create, list, userByID, read, update, remove };
+export default { create, list, userById, read, update, remove };
