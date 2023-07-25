@@ -6,8 +6,10 @@ import cors from "cors";
 import helmet from "helmet";
 import userRoutes from "./routes/user.routes";
 import authRoutes from "./routes/auth.routes";
+import devBundle from "./devBundle";
 
 const app = express();
+devBundle.compile(app); //Comment for production, developing only
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
