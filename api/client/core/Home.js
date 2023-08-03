@@ -5,6 +5,7 @@ import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
 import Typography from "@material-ui/core/Typography";
 import bike from "../assets/images/bike.jpg";
+import { Link } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
   card: {
@@ -35,6 +36,8 @@ export default function Home() {
           Typography test text
         </Typography>
       </CardContent>
+      <Link to="/users">Users</Link>
+      <Link to="/signup">Signup</Link>
     </Card>
   );
 }
