@@ -62,7 +62,7 @@ export default function Users() {
                     <Person />
                   </Avatar>
                 </ListItemAvatar>
-                <ListItemText primary={item.email} />
+                <ListItemText primary={item.name} />
                 <ListItemSecondaryAction>
                   <IconButton>
                     <ArrowForward />
