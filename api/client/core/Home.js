@@ -36,7 +36,7 @@ export default function Home() {
           Typography test text
         </Typography>
       </CardContent>
-      <Link to="/users">Users</Link>
+      <Link to="/api/users">Users</Link>
       <Link to="/signup">Signup</Link>
       <Link to="/signin">Signin</Link>
     </Card>
