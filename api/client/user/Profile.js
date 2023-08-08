@@ -10,10 +10,14 @@ import {
   Divider,
   ListItemText,
   makeStyles,
+  ListItemSecondaryAction,
+  IconButton,
 } from "@material-ui/core";
-import { Person } from "@material-ui/icons";
+import { Delete, Edit, Person } from "@material-ui/icons";
 import auth from "../auth/auth.helper";
 import { read } from "./api-user";
+import { Link } from "react-router-dom";
+import DeleteUser from "./DeleteUser";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -25,7 +29,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function Profile({ match }) {
+export default function Profile() {
   const [user, setUser] = useState({});
   const [redirectToSignin, setRedirectToSignin] = useState(false);
   const jwt = auth.isAuthenticated();
@@ -56,7 +60,7 @@ export default function Profile({ match }) {
   if (redirectToSignin) {
     return <Navigate to="/signin" />;
   }
-  console.log("match: ", match);
+
   return (
     <Paper className={classes.root} elevation={4}>
       <Typography variant="h6" className={classes.title}>
@@ -64,6 +68,17 @@ export default function Profile({ match }) {
       </Typography>
       <List dense>
         <ListItem>
+          {auth.isAuthenticated().user &&
+            auth.isAuthenticated().user._id == user._id && (
+              <ListItemSecondaryAction>
+                <Link to={"/user/edit/" + user._id}>
+                  <IconButton aria-label="Edit" color="primary">
+                    <Edit />
+                  </IconButton>
+                </Link>
+                {/*                <DeleteUser userId={user._id} />*/}
+              </ListItemSecondaryAction>
+            )}
           <ListItemAvatar>
             <Avatar>
               <Person />

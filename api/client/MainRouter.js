@@ -5,15 +5,17 @@ import Signup from "./user/Signup";
 import Signin from "./auth/Signin";
 import Users from "./user/Users";
 import Profile from "./user/Profile";
+import EditProfile from "./user/EditProfile";
 
 const MainRouter = () => {
   return (
     <Routes>
       <Route exact path="/" element={<Home />} />
-      <Route path="/api/users" element={<Users />} />
+      <Route path="/users" element={<Users />} />
       <Route path="/signup" element={<Signup />} />
       <Route path="/signin" element={<Signin />} />
-      <Route path="/api/users/:userId" element={<Profile />} />
+      <Route path="/user/edit/:userId" element={<EditProfile />} />
+      <Route path="/user/:userId" element={<Profile />} />
     </Routes>
   );
 };
