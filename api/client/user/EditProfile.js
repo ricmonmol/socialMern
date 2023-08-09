@@ -78,7 +78,7 @@ export default function EditProfile() {
     const jwt = auth.isAuthenticated();
     const user = {
       name: values.name || undefined,
-      email: value.email || undefined,
+      email: values.email || undefined,
       password: values.password || undefined,
     };
     update(

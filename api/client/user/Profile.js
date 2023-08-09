@@ -76,7 +76,7 @@ export default function Profile() {
                     <Edit />
                   </IconButton>
                 </Link>
-                {/*                <DeleteUser userId={user._id} />*/}
+                <DeleteUser userId={user._id} />
               </ListItemSecondaryAction>
             )}
           <ListItemAvatar>
