@@ -56,6 +56,7 @@ export default function Profile() {
       abortController.abort();
     };
   }, [userId]);
+  console.log("user: ", user)
 
   if (redirectToSignin) {
     return <Navigate to="/signin" />;

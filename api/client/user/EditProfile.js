@@ -53,10 +53,10 @@ export default function EditProfile() {
   const classes = useStyles();
   const jwt = auth.isAuthenticated();
 
-
   useEffect(() => {
     const abortController = new AbortController();
     const signal = abortController.signal;
+    console.log("userid useEffect:", userId)
     read(
       {
         userId: userId,
@@ -76,7 +76,6 @@ export default function EditProfile() {
   }, [userId]);
 
   const clickSubmit = () => {
-    const jwt = auth.isAuthenticated();
     const user = {
       name: values.name || undefined,
       email: values.email || undefined,
