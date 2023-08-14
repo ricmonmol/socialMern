@@ -6,18 +6,21 @@ import Signin from "./auth/Signin";
 import Users from "./user/Users";
 import Profile from "./user/Profile";
 import EditProfile from "./user/EditProfile";
+import Menu from "./core/Menu"
 
 const MainRouter = () => {
   return (
-    <Routes>
-      <Route exact path="/" element={<Home />} />
-      <Route path="/users" element={<Users />} />
-      <Route path="/signup" element={<Signup />} />
-      <Route path="/signin" element={<Signin />} />
-      <Route path="/user/edit/:userId" element={<EditProfile />} />
-      <Route path="/user/:userId" element={<Profile />} />
-    </Routes>
-  );
+    <>
+      <Menu />
+      <Routes>
+        <Route exact path="/" element={<Home />} />
+        <Route path="/users" element={<Users />} />
+        <Route path="/signup" element={<Signup />} />
+        <Route path="/signin" element={<Signin />} />
+        <Route path="/user/edit/:userId" element={<EditProfile />} />
+        <Route path="/user/:userId" element={<Profile />} />
+      </Routes>
+    </>);
 };
 
 export default MainRouter;
