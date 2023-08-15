@@ -10,7 +10,7 @@ import Menu from "./core/Menu"
 
 const MainRouter = () => {
   return (
-    <>
+    <div>
       <Menu />
       <Routes>
         <Route exact path="/" element={<Home />} />
@@ -20,7 +20,7 @@ const MainRouter = () => {
         <Route path="/user/edit/:userId" element={<EditProfile />} />
         <Route path="/user/:userId" element={<Profile />} />
       </Routes>
-    </>);
+    </div>);
 };
 
 export default MainRouter;

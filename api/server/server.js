@@ -12,7 +12,7 @@ app.listen(config.port, (err) => {
 mongoose.Promise = global.Promise;
 mongoose.connect(config.mongoUri, {
   useNewUrlParser: true,
-  //useCreateIndex: true,
+  // useCreateIndex: true,
   useUnifiedTopology: true,
 });
 mongoose.connection.on("error", () => {

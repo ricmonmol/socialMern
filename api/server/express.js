@@ -9,12 +9,13 @@ import authRoutes from "./routes/auth.routes";
 import devBundle from "./devBundle";
 import path from "path";
 import Template from "../template";
+
 import React from "react";
 import ReactDOMServer from "react-dom/server"
-import { StaticRouter } from "react-router-dom"
 import MainRouter from "../client/MainRouter"
 import { ServerStyleSheets, ThemeProvider } from "@material-ui/core";
 import theme from "../client/theme"
+import { StaticRouter } from "react-router-dom"
 
 const app = express();
 const CURRENT_WORKING_DIR = process.cwd();
@@ -30,15 +31,6 @@ app.use(cors());
 
 app.use("/", userRoutes, authRoutes);
 app.use("/dist", express.static(path.join(CURRENT_WORKING_DIR, "dist")));
-
-app.use((err, req, res, next) => {
-  if (err.name === "UnauthorizedError") {
-    res.status(401).json({ error: err.name + ": " + err.message });
-  } else if (err) {
-    res.status(400).json({ error: err.name + ": " + err.message });
-    console.log(err);
-  }
-});
 
 app.get("*", (req, res) => {
   const sheets = new ServerStyleSheets()
@@ -61,5 +53,14 @@ app.get("*", (req, res) => {
     css: css
   }))
 })
+
+app.use((err, req, res, next) => {
+  if (err.name === "UnauthorizedError") {
+    res.status(401).json({ error: err.name + ": " + err.message });
+  } else if (err) {
+    res.status(400).json({ error: err.name + ": " + err.message });
+    console.log(err);
+  }
+});
 
 export default app;
