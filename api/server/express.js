@@ -11,11 +11,11 @@ import path from "path";
 import Template from "../template";
 
 import React from "react";
-import ReactDOMServer from "react-dom/server"
-import MainRouter from "../client/MainRouter"
+import ReactDOMServer from "react-dom/server";
+import MainRouter from "../client/MainRouter";
 import { ServerStyleSheets, ThemeProvider } from "@material-ui/core";
-import theme from "../client/theme"
-import { StaticRouter } from "react-router-dom"
+import theme from "../client/theme";
+import { StaticRouter } from "react-router-dom";
 
 const app = express();
 const CURRENT_WORKING_DIR = process.cwd();
