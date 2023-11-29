@@ -38,7 +38,7 @@ const read = async (params, credentials, signal) => {
       },
     });
 
-    console.log("params: ", params)
+    console.log("params: ", params);
     return await response.json();
   } catch (err) {
     console.log(err);
