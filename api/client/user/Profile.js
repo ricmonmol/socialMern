@@ -13,7 +13,7 @@ import {
   ListItemSecondaryAction,
   IconButton,
 } from "@material-ui/core";
-import { Delete, Edit, Person } from "@material-ui/icons";
+import { Edit, Person } from "@material-ui/icons";
 import auth from "../auth/auth.helper";
 import { read } from "./api-user";
 import { Link } from "react-router-dom";
@@ -28,7 +28,7 @@ const useStyles = makeStyles((theme) => ({
     color: theme.palette.openTitle,
   },
 }));
-
+console.log("ok");
 export default function Profile() {
   const [user, setUser] = useState({});
   const [redirectToSignin, setRedirectToSignin] = useState(false);
@@ -44,7 +44,7 @@ export default function Profile() {
         userId: userId,
       },
       { t: jwt.token },
-      signal
+      signal,
     ).then((data) => {
       if (data && data.error) {
         setRedirectToSignin(true);
@@ -56,7 +56,7 @@ export default function Profile() {
       abortController.abort();
     };
   }, [userId]);
-  console.log("user: ", user)
+  console.log("user: ", user);
 
   if (redirectToSignin) {
     return <Navigate to="/signin" />;
