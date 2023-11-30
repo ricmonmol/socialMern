@@ -24,11 +24,10 @@ const useStyles = makeStyles((theme) => ({
     padding: `150px`,
   },
   title: {
-    marginTop: theme.spacing(1),
+    marginTop: theme.spacing(5),
     color: theme.palette.openTitle,
   },
 }));
-console.log("ok");
 export default function Profile() {
   const [user, setUser] = useState({});
   const [redirectToSignin, setRedirectToSignin] = useState(false);
@@ -47,6 +46,7 @@ export default function Profile() {
       signal,
     ).then((data) => {
       if (data && data.error) {
+        console.log(data);
         setRedirectToSignin(true);
       } else {
         setUser(data);
