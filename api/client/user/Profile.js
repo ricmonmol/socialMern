@@ -21,7 +21,7 @@ import DeleteUser from "./DeleteUser";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    padding: `14px`,
+    padding: `10px`,
   },
   title: {
     marginTop: theme.spacing(2),
@@ -65,7 +65,7 @@ export default function Profile() {
   return (
     <Paper className={classes.root} elevation={4}>
       <Typography variant="h6" className={classes.title}>
-        Profile
+        PROFILE
       </Typography>
       <List dense>
         <ListItem>
