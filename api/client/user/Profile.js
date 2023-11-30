@@ -21,10 +21,10 @@ import DeleteUser from "./DeleteUser";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    padding: `150px`,
+    padding: `50px`,
   },
   title: {
-    marginTop: theme.spacing(5),
+    marginTop: theme.spacing(1),
     color: theme.palette.openTitle,
   },
 }));
