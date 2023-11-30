@@ -24,7 +24,7 @@ const useStyles = makeStyles((theme) => ({
     padding: `150px`,
   },
   title: {
-    marginTop: theme.spacing(1),
+    marginTop: theme.spacing(3),
     color: theme.palette.openTitle,
   },
 }));
