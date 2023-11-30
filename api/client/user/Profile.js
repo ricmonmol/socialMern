@@ -21,7 +21,7 @@ import DeleteUser from "./DeleteUser";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    padding: `15px`,
+    padding: `10px`,
   },
   title: {
     marginTop: theme.spacing(2),
