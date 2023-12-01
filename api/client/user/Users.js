@@ -18,7 +18,7 @@ import { ArrowForward, Person } from "@material-ui/icons";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    padding: `100px`,
+    padding: `10px`,
   },
   title: {
     padding: `${theme.spacing(5)}px ${theme.spacing(2.5)}px
