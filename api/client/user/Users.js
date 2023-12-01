@@ -22,7 +22,7 @@ const useStyles = makeStyles((theme) => ({
   },
   title: {
     padding: `${theme.spacing(3)}px ${theme.spacing(2.5)}px
-    ${theme.spacing(2)}px`,
+    ${theme.spacing(9)}px`,
     color: theme.palette.openTitle,
   },
 }));

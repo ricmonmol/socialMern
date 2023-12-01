@@ -21,14 +21,13 @@ import DeleteUser from "./DeleteUser";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    padding: `150px`,
+    padding: `30px`,
   },
   title: {
     marginTop: theme.spacing(1),
     color: theme.palette.openTitle,
   },
 }));
-console.log("ok");
 export default function Profile() {
   const [user, setUser] = useState({});
   const [redirectToSignin, setRedirectToSignin] = useState(false);
