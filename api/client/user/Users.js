@@ -39,7 +39,7 @@ export default function Users() {
         console.log(data.error);
       } else {
         setUsers(data);
-        console.log("users:", users);
+        console.log("users:", data.error);
       }
     });
     return function cleanup() {
