@@ -18,10 +18,10 @@ import { ArrowForward, Person } from "@material-ui/icons";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    padding: `10px`,
+    padding: `100px`,
   },
   title: {
-    padding: `${theme.spacing(3)}px ${theme.spacing(2.5)}px
+    padding: `${theme.spacing(5)}px ${theme.spacing(2.5)}px
     ${theme.spacing(2)}px`,
     color: theme.palette.openTitle,
   },

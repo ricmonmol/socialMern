@@ -65,7 +65,7 @@ export default function Profile() {
   return (
     <Paper className={classes.root} elevation={4}>
       <Typography variant="h6" className={classes.title}>
-        PROFILE
+        Profile
       </Typography>
       <List dense>
         <ListItem>
